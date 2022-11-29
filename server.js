@@ -3,9 +3,11 @@ import cors from "cors";
 import db from "./Database/database.js";
 import UserRoute from "./Routes/UserRoute.js";
 import ProductRoute from "./Routes/ProductRoute.js";
+import dotenv from "dotenv";
+dotenv.config();
 //my app
 const app = express();
-const port = 4000;
+const port = process.env.PORT || 4000;
 //middle ware
 app.use(express.json());
 app.use(cors());
